@@ -1,0 +1,109 @@
+.main{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding:0 90px;
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.40),
+        rgba(0,0,0,.60)
+    ),
+    url("/fondocelendin.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* CONTENEDOR */
+
+.hero{
+
+    width:600px;
+    color:white;
+    animation:fade 1.2s ease;
+}
+
+
+/* BIENVENIDOS A */
+
+.subtitulo{
+    display:block;
+    color:#D4A017;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:8px;
+    margin-bottom:20px;
+}
+
+
+/* TITULO */
+
+.hero h1{
+    font-size:92px;
+    font-weight:800;
+    line-height:90px;
+    margin-bottom:20px;
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* LINEA */
+
+.linea{
+    width:120px;
+    height:4px;
+    background:#D4A017;
+    border-radius:10px;
+    margin-bottom:35px;
+}
+
+
+/* DESCRIPCION */
+
+.hero p{
+    font-size:26px;
+    line-height:40px;
+    color:#EEEEEE;
+    margin-bottom:45px;
+    max-width:520px;
+}
+
+
+/* BOTON */
+
+.hero button{
+    padding:18px 42px;
+    border:none;
+    border-radius:50px;
+    background:#D4A017;
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.hero button:hover{
+    background:#2A9DF4;
+    transform:translateY(-5px);
+}
+
+
+/* ANIMACION */
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}

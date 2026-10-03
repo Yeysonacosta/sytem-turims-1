@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(255, 253, 253);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: #37d20d;
+  color: #ffffff;
+}
+/* CORRECCION-DE-TEXTOS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
