@@ -1,4 +1,4 @@
-import styles from "../historia.module.css";
+import styles from "./TimeLine.module.css";
 import { timelineData } from "../data/timelineData";
 
 export default function Timeline() {

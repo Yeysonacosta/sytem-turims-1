@@ -9,7 +9,7 @@ export const culturaData = [
   },
   {
     periodo: "Época Colonial",
-    src: "/images/historia/colonial.jpg",
+    src: "/images/historia/colonial.png",
     alt: "Época Colonial",
     titulo: "Fundación",
     texto:

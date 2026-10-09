@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../turismo.module.css";
+import styles from "./Consejos.module.css";
 
 const consejos = [
   "Lleva ropa cómoda y abrigo para los cambios de clima.",
@@ -28,8 +28,8 @@ export default function Consejos() {
             <h2>Disfruta Celendín de forma segura</h2>
 
             <p>
-              Antes de salir, prepara lo necesario para recorrer la ciudad,
-              sus comunidades y sus espacios naturales.
+              Antes de salir, prepara lo necesario para recorrer la ciudad, sus
+              comunidades y sus espacios naturales.
             </p>
 
             <div className={styles.tipsList}>

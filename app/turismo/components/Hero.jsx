@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../turismo.module.css";
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
@@ -26,8 +26,8 @@ export default function Hero() {
         </h1>
 
         <p>
-          Explora plazas, iglesias, miradores, cascadas, montañas,
-          tradiciones y paisajes llenos de historia.
+          Explora plazas, iglesias, miradores, cascadas, montañas, tradiciones y
+          paisajes llenos de historia.
         </p>
 
         <div className={styles.heroButtons}>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../turismo.module.css";
+import styles from "./Lugares.module.css";
 import { lugares } from "../data/lugaresData";
 
 export default function Lugares() {
@@ -8,7 +8,9 @@ export default function Lugares() {
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
           <div>
-            <span className={styles.eyebrow}>Lugares reales de la provincia</span>
+            <span className={styles.eyebrow}>
+              Lugares reales de la provincia
+            </span>
             <h2>Lugares Turísticos Destacados</h2>
           </div>
         </div>

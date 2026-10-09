@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../historia.module.css";
+import styles from "./Cultura.module.css";
 import { culturaData } from "../data/culturaData";
 
 export default function Cultura() {

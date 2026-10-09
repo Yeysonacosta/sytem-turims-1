@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../gastronomia.module.css";
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
@@ -16,9 +16,7 @@ export default function Hero() {
       <div className={styles.heroOverlay} />
 
       <div className={styles.heroContenido}>
-        <span className={styles.etiqueta}>
-          Sabores de nuestra tierra
-        </span>
+        <span className={styles.etiqueta}>Sabores de nuestra tierra</span>
 
         <h1>
           Gastronomía de

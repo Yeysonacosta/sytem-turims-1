@@ -19,7 +19,7 @@ export default function Historia() {
           "Durante la colonia, lo que hoy es la ciudad no existía como tal; era una enorme llanura llamada la Hacienda Pampa del Estero, de propiedad de la orden religiosa de los Jesuitas. Tras la expulsión de esta orden en 1767, las tierras pasaron a manos de la Corona española y luego a propietarios particulares. Para finales del siglo XVIII, la zona empezó a poblarse de familias españolas, criollas y un importante contingente de descendientes de judíos conversos (sefardíes) y portugueses que buscaban refugio en zonas apartadas de la sierra para escapar del control estricto de la Santa Inquisición de Lima.",
         ]}
         imagen={{
-          src: "/images/historia/origenes-celendin.png",
+          src: "/images/historia/celendin-historia.jpg",
           alt: "Celendín antiguo",
           width: 600,
           height: 450,

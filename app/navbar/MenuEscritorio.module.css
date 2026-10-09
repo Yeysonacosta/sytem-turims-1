@@ -1,0 +1,20 @@
+.menuEscritorio {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 1.35vw, 35px);
+}
+
+/* Enlaces del lado izquierdo, si se utilizan */
+.menuIzquierdo {
+  grid-column: 1;
+  justify-content: flex-end;
+  padding-right: 24px;
+}
+
+/* Enlaces del lado derecho, si se utilizan */
+.menuDerecho {
+  grid-column: 3;
+  justify-content: flex-start;
+  padding-left: 24px;
+}

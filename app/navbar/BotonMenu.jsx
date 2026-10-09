@@ -1,6 +1,5 @@
 "use client";
-
-import styles from "./Navbar.module.css";
+import styles from "./BotonMenu.module.css";
 
 export default function BotonMenu({ abierto, onClick }) {
   return (

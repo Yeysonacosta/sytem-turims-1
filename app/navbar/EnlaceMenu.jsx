@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import styles from "./Navbar.module.css";
+import styles from "./EnlaceMenu.module.css";
 
 export default function EnlaceMenu({ enlace, pathname, cerrarMenu }) {
   const activo =

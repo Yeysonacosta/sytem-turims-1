@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../fiestas.module.css";
+import styles from "./Introduccion.module.css";
 
 export default function Introduccion() {
   return (
@@ -7,24 +7,22 @@ export default function Introduccion() {
       <div className={styles.container}>
         <div className={styles.introductionGrid}>
           <div className={styles.introductionContent}>
-            <span className={styles.eyebrow}>
-              Tradición celendina
-            </span>
+            <span className={styles.eyebrow}>Tradición celendina</span>
 
             <h2>Una celebración que une generaciones</h2>
 
             <p>
               Las Fiestas Patronales de Celendín representan uno de los
               encuentros religiosos y culturales más importantes de la
-              provincia. Durante estas fechas, las calles reciben a
-              visitantes, familias y comunidades que participan en las
-              diferentes actividades.
+              provincia. Durante estas fechas, las calles reciben a visitantes,
+              familias y comunidades que participan en las diferentes
+              actividades.
             </p>
 
             <p>
-              Las procesiones, las bandas musicales, la gastronomía, las
-              ferias y las presentaciones artísticas convierten la
-              celebración en una muestra viva de la identidad celendina.
+              Las procesiones, las bandas musicales, la gastronomía, las ferias
+              y las presentaciones artísticas convierten la celebración en una
+              muestra viva de la identidad celendina.
             </p>
 
             <div className={styles.features}>

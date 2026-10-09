@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../historia.module.css";
+import styles from "./sectionTextoImagen.module.css";
 
 export default function SeccionTextoImagen({
   titulo,

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../fiestas.module.css";
+import styles from "./Actividades.module.css";
 import { actividades } from "../data/actividadesData";
 
 export default function Actividades() {
@@ -7,9 +7,7 @@ export default function Actividades() {
     <section className={styles.activitiesSection}>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <span className={styles.eyebrow}>
-            Vive la experiencia
-          </span>
+          <span className={styles.eyebrow}>Vive la experiencia</span>
 
           <h2>Fiestas tradicionales de Celendín</h2>
 
@@ -21,10 +19,7 @@ export default function Actividades() {
 
         <div className={styles.activitiesGrid}>
           {actividades.map((actividad) => (
-            <article
-              className={styles.activityCard}
-              key={actividad.titulo}
-            >
+            <article className={styles.activityCard} key={actividad.titulo}>
               <div className={styles.activityImage}>
                 <Image
                   src={actividad.imagen}

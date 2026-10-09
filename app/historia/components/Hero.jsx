@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../historia.module.css";
+import styles from "./Hero.module.css";
 
 export default function Hero({ src, alt, titulo, subtitulo }) {
   return (

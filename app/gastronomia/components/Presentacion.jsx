@@ -1,4 +1,4 @@
-import styles from "../gastronomia.module.css";
+import styles from "./Presentacion.module.css";
 import { caracteristicas } from "../data/caracteristicasData";
 
 export default function Presentacion() {
@@ -10,16 +10,13 @@ export default function Presentacion() {
 
       <p>
         La gastronomía de Celendín reúne productos de los campos andinos,
-        técnicas familiares y preparaciones que se disfrutan durante todo
-        el año.
+        técnicas familiares y preparaciones que se disfrutan durante todo el
+        año.
       </p>
 
       <div className={styles.caracteristicas}>
         {caracteristicas.map((item) => (
-          <article
-            className={styles.caracteristica}
-            key={item.titulo}
-          >
+          <article className={styles.caracteristica} key={item.titulo}>
             <div className={styles.icono}>{item.icono}</div>
 
             <h3>{item.titulo}</h3>

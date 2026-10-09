@@ -4,5 +4,4 @@ export const enlacesDerecha = [
   { nombre: "Turismo", href: "/turismo" },
   { nombre: "Fiestas", href: "/fiestas" },
   { nombre: "Gastronomia", href: "/gastronomia" },
-  { nombre: "Galeria", href: "/galeria" },
 ];

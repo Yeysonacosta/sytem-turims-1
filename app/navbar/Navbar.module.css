@@ -1,306 +1,41 @@
 .header {
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 9999;
   width: 100%;
-  height: 96px;
+  height: 76px;
   overflow: visible;
-  border-bottom: 1px solid rgba(218, 166, 84, 0.25);
-  background:
-    linear-gradient(
-      90deg,
-      #160804 0%,
-      #210d06 50%,
-      #160804 100%
-    );
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.36);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.550) 20%,
+    rgba(0, 0, 0, 0.550) 60%,
+    rgba(0, 0, 0, 0.550) 60%
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
+/* 2. CONTENEDOR INTERIOR DEL NAVBAR
+    Organiza el logo, los enlaces y el botón hamburguesa.*/
 .navbar {
-   display:flex;
-    align-items:center;
-    justify-content:space-between;
-    width:100%;
-    padding:0 60px;
-}
-
-.menuEscritorio {
-  min-width: 0;
+  position: relative;
   display: flex;
   align-items: center;
-  gap: clamp(16px, 1.35vw, 29px);
-}
-
-.menuIzquierdo {
-  grid-column: 1;
-  justify-content: flex-end;
-  padding-right: 24px;
-}
-
-.menuDerecho {
-  grid-column: 3;
-  justify-content: flex-start;
-  padding-left: 24px;
-}
-
-.enlace {
-  position: relative;
-  padding: 38px 0 33px;
-  color: #f4d9aa;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(0.72rem, 0.86vw, 0.94rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.055em;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease;
-}
-
-.enlace::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 24px;
-  width: 0;
-  height: 2px;
-  border-radius: 20px;
-  background: #e9b858;
-  transform: translateX(-50%);
-  transition: width 0.25s ease;
-}
-
-.enlace:hover {
-  color: #ffd885;
-  transform: translateY(-2px);
-}
-
-.enlace:hover::after,
-.activo::after {
+  justify-content: space-between;
   width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  background: transparent;
+  box-sizing: border-box;
 }
 
-.activo {
-  color: #efbe64;
-}
-
-.logoLink {
-  position: relative;
-  z-index: 10;
-  grid-column: 2;
-  width: 190px;
-  height: 145px;
-  margin-top: -5px;
-  align-self: start;
-  justify-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.logoLink:hover {
-  transform: translateY(3px) scale(1.04);
-}
-
-.logoImagen {
-  display: block;
-  width: 190px;
-  height: 145px;
-  object-fit: contain;
-  filter:
-    drop-shadow(0 9px 9px rgba(0, 0, 0, 0.5))
-    drop-shadow(0 0 14px rgba(225, 171, 82, 0.2));
-}
-
-.botonMenu {
-  display: none;
-  width: 49px;
-  height: 47px;
-  padding: 9px;
-  border: 1px solid rgba(240, 202, 138, 0.55);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  cursor: pointer;
-}
-
-.botonMenu span {
-  width: 27px;
-  height: 2px;
-  margin: 6px auto;
-  display: block;
-  border-radius: 10px;
-  background: #f4ddba;
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
-}
-
-.botonMenuAbierto span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.botonMenuAbierto span:nth-child(2) {
-  opacity: 0;
-}
-
-.botonMenuAbierto span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-.menuMovil {
-  position: absolute;
-  top: 100%;
-  left: 14px;
-  right: 14px;
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  border: 1px solid transparent;
-  border-radius: 0 0 20px 20px;
-  display: flex;
-  flex-direction: column;
-  background: rgba(25, 9, 5, 0.985);
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition:
-    max-height 0.35s ease,
-    padding 0.35s ease,
-    opacity 0.25s ease,
-    transform 0.25s ease;
-}
-
-.menuMovilAbierto {
-  max-height: 650px;
-  padding: 18px 20px 22px;
-  border-color: rgba(231, 181, 96, 0.25);
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.48);
-}
-
-.menuMovil .enlace {
-  width: 100%;
-  padding: 16px 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.94rem;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-.menuMovil .enlace::after {
-  left: 12px;
-  bottom: 7px;
-  transform: none;
-}
-
-.menuMovil .activo::after {
-  width: 44px;
-}
-
-@media (max-width: 1360px) {
-  .navbar {
-    width: calc(100% - 28px);
-    grid-template-columns: minmax(0, 1fr) 165px minmax(0, 1fr);
-  }
-
-  .menuEscritorio {
-    gap: 14px;
-  }
-
-  .menuIzquierdo {
-    padding-right: 13px;
-  }
-
-  .menuDerecho {
-    padding-left: 13px;
-  }
-
-  .enlace {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.71rem;
-    letter-spacing: 0;
-  }
-
-  .logoLink,
-  .logoImagen {
-    width: 165px;
-    height: 135px;
-  }
-}
-
-@media (max-width: 1100px) {
-  .header {
-    height: 82px;
-  }
-
-  .navbar {
-    width: calc(100% - 30px);
-    height: 82px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  .logoLink {
-    position: absolute;
-    top: -3px;
-    left: 50%;
-    width: 115px;
-    height: 98px;
-    margin: 0;
-    transform: translateX(-50%);
-  }
-
-  .logoLink:hover {
-    transform: translateX(-50%);
-  }
-
-  .logoImagen {
-    width: 115px;
-    height: 98px;
-  }
-
-  .botonMenu {
-    display: block;
-  }
-}
-
-/*responsivo para tablet*/
-@media (max-width: 768px) {
-  .menuEscritorio {
-    display: none;
-  }
-}
-
-@media (max-width: 500px) {
-  .navbar {
-    width: calc(100% - 22px);
-  }
-
-  .logoLink,
-  .logoImagen {
-    width: 105px;
-    height: 92px;
-  }
-
-  .botonMenu {
-    width: 46px;
-    height: 45px;
-  }
-
-  .menuMovil {
-    left: 8px;
-    right: 8px;
-  }
-}
+/* 11. ACCESIBILIDAD
+    Reducir animaciones si el usuario lo solicita en su sistema. */
 
 @media (prefers-reduced-motion: reduce) {
   .enlace,
@@ -311,126 +46,3 @@
     transition: none;
   }
 }
-/* COLORES ORIGINALES INICIO */
-
-/* Barra transparente oscura como estaba anteriormente */
-.header {
-  background: rgba(0, 0, 0, 0.28) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
-  box-shadow: none !important;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-}
-
-/* Letras blancas */
-.enlace,
-.navLink {
-  color: #ffffff !important;
-}
-
-/* Verde original al pasar el mouse y en la página activa */
-.enlace:hover,
-.navLink:hover,
-.activo,
-.active {
-  color: #2ee80d !important;
-}
-
-/* Línea verde debajo del enlace */
-.enlace::after,
-.navLink::after {
-  background: #2ee80d !important;
-}
-
-/* Quitar el brillo dorado del logo */
-.logoImagen,
-.logoImage {
-  filter: drop-shadow(0 7px 8px rgba(0, 0, 0, 0.48)) !important;
-}
-
-/* Botón de hamburguesa */
-.botonMenu,
-.menuButton {
-  border-color: rgba(255, 255, 255, 0.65) !important;
-  background: rgba(0, 0, 0, 0.22) !important;
-}
-
-.botonMenu span,
-.menuButton span {
-  background: #ffffff !important;
-}
-
-/* Menú de celular */
-.menuMovil,
-.mobileMenu {
-  background: rgba(3, 23, 14, 0.97) !important;
-  border-color: rgba(46, 232, 13, 0.25) !important;
-}
-
-/* COLORES ORIGINALES FIN */
-/* CORRECCION NAVBAR SOBRE IMAGEN INICIO */
-
-/*
-  El navbar queda encima de la imagen principal.
-  Ya no ocupa un espacio gris o blanco separado.
-*/
-.header {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-  z-index: 9999 !important;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.58) 0%,
-      rgba(0, 0, 0, 0.30) 65%,
-      rgba(0, 0, 0, 0.08) 100%
-    ) !important;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* Evitar fondos blancos dentro de la barra */
-.navbar {
-  background: transparent !important;
-}
-
-/* Letras blancas */
-.enlace {
-  color: #ffffff !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
-}
-
-/* Enlace seleccionado y efecto hover */
-.enlace:hover,
-.activo {
-  color: #2ee80d !important;
-}
-
-/* Línea verde inferior */
-.enlace::after {
-  background: #2ee80d !important;
-}
-
-/* Mantener el logo centrado y sin fondo */
-.logoLink {
-  background: transparent !important;
-}
-
-.logoImagen {
-  background: transparent !important;
-  filter: drop-shadow(0 7px 9px rgba(0, 0, 0, 0.55)) !important;
-}
-
-/* Menú desplegable de celular */
-.menuMovil {
-  background: rgba(3, 23, 14, 0.97) !important;
-}
-
-/* CORRECCION NAVBAR SOBRE IMAGEN FIN */

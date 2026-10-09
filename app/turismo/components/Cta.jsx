@@ -1,6 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
-import styles from "../turismo.module.css";
+import styles from "./Cta.module.css";
 
 export default function Cta() {
   return (
@@ -20,15 +19,9 @@ export default function Cta() {
         <h2>Celendín te Espera</h2>
 
         <p>
-          Descubre sus paisajes, comparte con su gente y conoce las
-          tradiciones que hacen especial a esta provincia.
+          Descubre sus paisajes, comparte con su gente y conoce las tradiciones
+          que hacen especial a esta provincia.
         </p>
-
-        <div className={styles.heroButtons}>
-          <Link href="/galeria" className={styles.primaryButton}>
-            Ver galería
-          </Link>
-        </div>
       </div>
     </section>
   );

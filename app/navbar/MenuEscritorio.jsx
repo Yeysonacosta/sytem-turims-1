@@ -1,5 +1,5 @@
 import EnlaceMenu from "./EnlaceMenu";
-import styles from "./Navbar.module.css";
+import styles from "./MenuEscritorio.module.css";
 
 export default function MenuEscritorio({ enlaces, pathname, cerrarMenu }) {
   return (

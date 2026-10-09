@@ -1,0 +1,205 @@
+.presentation {
+  padding: 10vh;
+  background:
+    radial-gradient(
+      circle at 5% 8%,
+      rgba(88,213,102,.08),
+      transparent 25%
+    ),
+    #f3f6f1;
+}
+
+.presentationGrid {
+  display: grid;
+  grid-template-columns: 1fr .95fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/*etiqueta superior*/
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #278849;
+  font-size: .80rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 36px;
+  height: 2px;
+  border-radius: 50px;
+  background: #55d665;
+}
+
+/*titulos*/
+
+.presentationText h2 {
+  margin: 18px 0 24px;
+  color: #12362c;
+  font-size: clamp(2.3rem,5vw,4rem);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+/*parrafos*/
+
+.presentationText p {
+
+  margin-bottom: 18px;
+  color: #61706c;
+  font-size: 1.03rem;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+/*estadisticas*/
+
+.presentationStats {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.presentationStats div {
+  padding: 24px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(20,70,40,.08);
+  border-radius: 18px;
+  transition: .3s;
+}
+
+.presentationStats div:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.presentationStats strong{
+  display:block;
+  color:#28a745;
+  font-size:1.7rem;
+  margin-bottom:8px;
+}
+
+.presentationStats span{
+  color:#6d7974;
+  font-size:.82rem;
+  line-height:1.5;
+}
+
+/*imagen*/
+
+.presentationImage{
+  position:relative;
+  min-height:540px;
+  overflow:hidden;
+  border-radius:28px;
+  background:#dce7dd;
+  box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+.presentationImage:hover .coverImage{
+  transform:scale(1.05);
+}
+
+/*tarjeta flotante*/
+
+.imageBadge{
+  position:absolute;
+  right:25px;
+  bottom:25px;
+  padding:18px 22px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  border-radius:18px;
+  background:rgba(8,35,25,.82);
+  backdrop-filter:blur(15px);
+  color:white;
+}
+
+.imageBadge>span{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#55d665;
+}
+
+.imageBadge small{
+  display:block;
+  color:#8ee39b;
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+
+.imageBadge strong{
+  display:block;
+  margin-top:4px;
+  font-size:.95rem;
+}
+
+/*experiencias*/
+
+.experienceGrid{
+  margin-top:70px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+/*tarjetas*/
+
+.experienceCard{
+  padding:28px;
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  border-radius:22px;
+  background:white;
+  border:1px solid rgba(20,70,40,.08);
+  box-shadow:0 15px 30px rgba(0,0,0,.05);
+  transition:.35s;
+}
+
+.experienceCard:hover{
+  transform:translateY(-8px);
+  box-shadow:0 22px 45px rgba(0,0,0,.12);
+  border-color:#55d665;
+}
+
+/*icono*/
+.experienceIcon{
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: #e6f6e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*titulo*/
+.experienceCard h3{
+  margin:0 0 10px;
+  color:#17352e;
+  font-size:1.15rem;
+  font-weight:700;
+}
+
+/*textoo*/
+
+.experienceCard p{
+  margin:0;
+  color:#697874;
+  line-height:1.7;
+  font-size:.92rem;
+}

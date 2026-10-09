@@ -1,0 +1,53 @@
+.enlace {
+  position: relative;
+  display: inline-block;
+  padding: 38px 0 33px;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(0.72rem, 0.86vw, 0.94rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.055em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Línea inferior de cada enlace */
+.enlace::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  width: 0;
+  height: 2px;
+  border-radius: 20px;
+  background: #2ee80d;
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+/* Efecto al pasar el cursor */
+.enlace:hover {
+  color: #2ee80d;
+  transform: translateY(-2px);
+}
+
+/* Mostrar la línea al pasar el cursor */
+.enlace:hover::after {
+  width: 100%;
+}
+
+/* Enlace correspondiente a la página actual */
+.activo {
+  color: #2ee80d;
+}
+
+/* Línea permanente en el enlace activo */
+.activo::after {
+  width: 100%;
+}

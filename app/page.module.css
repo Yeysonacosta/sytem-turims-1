@@ -19,11 +19,10 @@
 
 /* CONTENEDOR */
 
-.hero{
-
-    width:600px;
-    color:white;
-    animation:fade 1.2s ease;
+.hero {
+    width: 600px;
+    color: white;
+    animation: entrance 1.2s ease both;
 }
 
 
@@ -92,18 +91,27 @@
 }
 
 
-/* ANIMACION */
+/* ANIMACIONES */
 
-@keyframes fade{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
+@keyframes entrance {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%,
+    100% {
+    transform: translateY(0);
     }
 
+    50% {
+        transform: translateY(7px);
+    }
 }

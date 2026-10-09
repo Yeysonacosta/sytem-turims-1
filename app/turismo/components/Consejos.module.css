@@ -1,0 +1,97 @@
+.tipsSection {
+  padding: 10vh;
+  background: #edf3eb;
+}
+
+.tipsGrid {
+  display: grid;
+  grid-template-columns: .95fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/*imagenes-consejos*/
+
+.tipsImage {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #dbe6dc;
+  box-shadow: 0 25px 60px rgba(18,54,44,.15);
+}
+
+.tipsImage:hover .coverImage {
+  transform: scale(1.06);
+}
+
+/*contenido  -visitante*/
+
+.tipsContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tipsContent h2 {
+  margin: 18px 0 25px;
+  color: #17352e;
+  font-size: clamp(2.3rem,5vw,4rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.tipsContent>p {
+  margin-bottom: 35px;
+  color: #61706c;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/*lista de consejjos*/
+
+.tipsList {
+  display: grid;
+  gap: 15px;
+}
+
+/*tarjetitas*/
+.tipsList>div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(20,70,40,.08);
+  transition: .3s;
+}
+
+.tipsList>div:hover {
+  transform: translateX(8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.08);
+}
+
+/*numers*/
+.tipsList span {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #dff3df;
+  color: #228a48;
+  font-weight: 800;
+  font-size: .8rem;
+}
+
+/*text*/
+
+.tipsList p {
+  margin: 0;
+  color: #556660;
+  line-height: 1.6;
+  font-size: .93rem;
+}

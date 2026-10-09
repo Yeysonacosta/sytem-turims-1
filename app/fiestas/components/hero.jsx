@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import styles from "../fiestas.module.css";
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
@@ -34,10 +33,6 @@ export default function Hero() {
           <a href="#tradicion" className={styles.primaryButton}>
             Conocer la tradición
           </a>
-
-          <Link href="/galeria" className={styles.secondaryButton}>
-            Ver galería
-          </Link>
         </div>
       </div>
     </section>

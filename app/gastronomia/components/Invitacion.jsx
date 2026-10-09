@@ -1,4 +1,4 @@
-import styles from "../gastronomia.module.css";
+import styles from "./Invitacion.module.css";
 
 export default function Invitacion() {
   return (
@@ -9,8 +9,8 @@ export default function Invitacion() {
         <h2>Disfruta los sabores de Celendín</h2>
 
         <p>
-          Visita mercados, restaurantes y cocinas familiares para conocer
-          las recetas y productos de nuestra provincia.
+          Visita mercados, restaurantes y cocinas familiares para conocer las
+          recetas y productos de nuestra provincia.
         </p>
       </div>
     </section>

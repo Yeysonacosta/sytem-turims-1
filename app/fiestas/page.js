@@ -4,7 +4,6 @@ import Hero from "./components/hero";
 import Introduccion from "./components/Introduccion";
 import Actividades from "./components/Actividades";
 import Timeline from "./components/TimeLine";
-import Galeria from "./components/Galeria";
 import Cta from "./components/Cta";
 
 export const metadata = {
@@ -20,7 +19,6 @@ export default function FiestasPage() {
       <Introduccion />
       <Actividades />
       <Timeline />
-      <Galeria />
       <Cta />
     </main>
   );

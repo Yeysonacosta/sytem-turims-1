@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../turismo.module.css";
+import styles from "./Presentacion.module.css";
 import { experiencias } from "../data/experienciaData";
 
 export default function Presentacion() {
@@ -8,14 +8,16 @@ export default function Presentacion() {
       <div className={styles.container}>
         <div className={styles.presentationGrid}>
           <div className={styles.presentationText}>
-            <span className={styles.eyebrow}>Turismo, cultura y naturaleza</span>
+            <span className={styles.eyebrow}>
+              Turismo, cultura y naturaleza
+            </span>
 
             <h2>Una Provincia Llena de Lugares por Descubrir</h2>
 
             <p>
               Celendín ofrece recorridos por su centro histórico, paisajes
-              naturales, cascadas, miradores y comunidades que mantienen
-              vivas sus costumbres.
+              naturales, cascadas, miradores y comunidades que mantienen vivas
+              sus costumbres.
             </p>
 
             <p>

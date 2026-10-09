@@ -1,0 +1,152 @@
+.placesSection {
+  padding: 10vh;
+  background: #06194d;
+}
+
+.sectionHeader {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 60px;
+}
+
+.sectionHeader .eyebrow {
+  color: #79e38b;
+}
+
+.sectionHeader h2 {
+  margin: 18px 0 0;
+  color: #ffffff;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.sectionHeader p {
+  color: #f6faf8;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/*grid*/
+
+.placesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/*tarjetaa*/
+
+.placeCard {
+  overflow: hidden;
+  border-radius: 24px;
+  background: #132b24;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 18px 45px rgba(0,0,0,.18);
+  transition:
+      transform .35s,
+      box-shadow .35s,
+      border-color .35s;
+}
+
+.placeCard:hover {
+  transform: translateY(-12px);
+  border-color: rgba(92,220,109,.5);
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+}
+
+/*imaggen*/
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #308f6a;
+}
+
+.cardImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to top,
+      rgba(0,0,0,.6),
+      transparent 45%
+  );
+}
+
+.placeCard:hover .coverImage {
+  transform: scale(1.08);
+}
+
+/*numero*/
+.cardNumber {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: .8rem;
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+/*tipo*/
+.cardType {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #09e727;
+  color: #0d2317;
+  font-size: .72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/*contenido*/
+.cardContent {
+  padding: 25px;
+}
+
+/*zona*/
+.cardZone {
+  display: inline-block;
+  color:#1ca3e2;
+  font-size: .76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/*descripciones*/
+
+.cardContent p {
+  min-height: 90px;
+  color: #ffffff;
+  line-height: 1.7;
+  font-size: .92rem;
+}
+
+/*pie*/
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #d2dfdb;
+  font-size: .82rem;
+}

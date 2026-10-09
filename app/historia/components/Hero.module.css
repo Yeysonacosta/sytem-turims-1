@@ -1,0 +1,63 @@
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.heroImage{
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    );
+    z-index: 2;
+}
+
+.heroContent{
+    position: absolute;
+    top: 55%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 3;
+    color: white;
+    max-width: 900px;
+}
+
+.heroContent h1{
+    max-width: 850px;
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+    text-shadow: 0 8px 18px rgba(0,0,0,.25);
+    display: inline-block;
+    margin-top: 20px;
+    color: #fdfdfd;
+}
+.heroContent span {
+    max-width: 900px;
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+    text-shadow: 0 8px 18px rgba(0,0,0,.25);
+    display: inline-block;
+    margin-top: 20px;
+    color: #3ed858;
+}
+
+.heroContent p{
+    font-size: 22px;
+    line-height: 38px;
+}

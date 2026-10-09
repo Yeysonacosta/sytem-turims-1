@@ -1,0 +1,91 @@
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #a45131;
+  font-size: 0.77rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 36px;
+  height: 2px;
+  border-radius: 10px;
+  background: #d7893c;
+}
+
+/* LÍNEA DE TIEMPO */
+
+.timelineSection {
+  padding: 110px 0;
+  background: #f3ede3;
+}
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.timelineHeading {
+  position: sticky;
+  top: 130px;
+}
+
+.timelineHeading p {
+  color: #74685f;
+  line-height: 1.8;
+}
+
+.timeline {
+  border-top: 1px solid rgba(70, 42, 26, 0.15);
+}
+
+.timelineItem {
+  padding: 34px 8px;
+  border-bottom: 1px solid rgba(70, 42, 26, 0.15);
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  gap: 20px;
+  transition: padding-left 0.25s ease;
+}
+
+.timelineItem:hover {
+  padding-left: 19px;
+}
+
+.timelineNumber {
+  color: #b45b34;
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.timelineItem h3 {
+  margin: 0 0 10px;
+  color: #39271c;
+  font-size: 1.4rem;
+}
+
+.timelineItem p {
+  margin: 0;
+  color: #776b62;
+  line-height: 1.7;
+}
+
+.timelineHeading h2 {
+  margin: 17px 0 24px;
+  color: #37251a;
+  font-size: clamp(2.7rem, 5vw, 4.7rem);
+  line-height: 1.01;
+  letter-spacing: -0.05em;
+}

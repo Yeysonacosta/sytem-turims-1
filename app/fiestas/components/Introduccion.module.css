@@ -1,0 +1,144 @@
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.introduction {
+  padding: 110px 0;
+  background:
+    radial-gradient(
+      circle at 5% 5%,
+      rgba(239, 179, 77, 0.12),
+      transparent 25%
+    ),
+    #f8f4eb;
+}
+
+.introductionGrid {
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #a45131;
+  font-size: 0.77rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 36px;
+  height: 2px;
+  border-radius: 10px;
+  background: #d7893c;
+}
+
+.introductionContent h2 {
+  margin: 17px 0 24px;
+  color: #37251a;
+  font-size: clamp(2.7rem, 5vw, 4.7rem);
+  line-height: 1.01;
+  letter-spacing: -0.05em;
+}
+
+.introductionContent > p {
+  margin: 0 0 17px;
+  color: #70645b;
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.features {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.features div {
+  padding: 20px 15px;
+  border: 1px solid rgba(89, 54, 32, 0.1);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.features strong,
+.features span {
+  display: block;
+}
+
+.features strong {
+  color: #a55031;
+  font-size: 1.35rem;
+}
+
+.features span {
+  margin-top: 6px;
+  color: #7b7067;
+  font-size: 0.77rem;
+  line-height: 1.4;
+}
+
+.introductionImage {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #e4d9cb;
+  box-shadow: 0 30px 70px rgba(59, 35, 21, 0.17);
+}
+
+.coverImage {
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+
+.introductionImage:hover .coverImage,
+.galleryItem:hover .coverImage {
+  transform: scale(1.055);
+}
+
+.imageInformation {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  max-width: calc(100% - 44px);
+  padding: 15px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: rgba(54, 24, 18, 0.83);
+  color: #ffffff;
+  backdrop-filter: blur(15px);
+}
+
+.imageInformation > span {
+  font-size: 1.5rem;
+}
+
+.imageInformation small,
+.imageInformation strong {
+  display: block;
+}
+
+.imageInformation small {
+  color: #f4c875;
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.imageInformation strong {
+  margin-top: 3px;
+  font-size: 0.92rem;
+}

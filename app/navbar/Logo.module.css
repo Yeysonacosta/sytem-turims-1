@@ -1,0 +1,46 @@
+
+.logoLink {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 120px;
+  height: 100px;
+  background: transparent;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+/* Animación del logo al pasar el cursor */
+.logoLink:hover {
+  transform: translateY(3px) scale(1.04);
+}
+
+/* Imagen del logo */
+.logoImagen {
+  display: block;
+  width: 150px;
+  height: 105px;
+  object-fit: contain;
+  background: transparent;
+  filter: drop-shadow(
+    0 7px 9px rgba(0, 0, 0, 0.55)
+  );
+}
+
+.logoLink {
+  position: relative;
+  z-index: 10;
+  margin-top: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 120px;
+  height: 100px;
+  background: transparent;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}

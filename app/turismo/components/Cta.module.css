@@ -1,0 +1,78 @@
+.cta {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.ctaImage {
+  object-fit: cover;
+  z-index: -2;
+}
+/*oscurecer imag*/
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+      135deg,
+      rgba(5,34,23,.92),
+      rgba(18,82,45,.76)
+  );
+}
+
+/*contenidosss*/
+
+.ctaContent {
+  width: min(820px, calc(100% - 50px));
+  color: white;
+  padding: 90px 0;
+}
+
+/*texto pequeño*/
+.ctaContent>span {
+  color: #88e696;
+  font-size: .8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+}
+
+/*titulo*/
+.ctaContent h2 {
+  margin: 18px 0 20px;
+  font-size: clamp(3rem,6vw,5rem);
+  line-height: 1;
+  font-weight: 800;
+}
+
+/*descripciones*/
+
+.ctaContent>p {
+  max-width: 650px;
+  margin: auto;
+  color: rgba(255,255,255,.85);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/*centrar boton*/
+.ctaContent .heroButtons {
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.coverImage {
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+

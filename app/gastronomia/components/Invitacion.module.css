@@ -1,0 +1,38 @@
+.invitacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 50px;
+  border-radius: 30px;
+  background:
+    radial-gradient(
+      circle at right top,
+      rgba(90, 230, 46, 0.22),
+      transparent 38%
+    ),
+    #123f34;
+}
+
+.invitacion h2 {
+  max-width: 750px;
+  color: #ffffff;
+}
+
+.invitacion p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.invitacion span {
+  display: inline-block;
+  color: #5ae62e;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
