@@ -109,7 +109,7 @@
   line-height: 1.4;
   color: #6b4a2f;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -300,9 +300,7 @@
     gap: 1.2em;
   }
 
-  .descripcion {
-    -webkit-line-clamp: 2;
-  }
+
 }
 
 /* ---------- Laptop y PC ---------- */
