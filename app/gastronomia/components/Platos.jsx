@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Platos.module.css";
 import { platos } from "../data/platosdata";
 
@@ -18,7 +19,7 @@ export default function Platos() {
 
       <div className={styles.grid}>
         {platos.map((plato) => (
-          <article className={styles.tarjeta} key={plato.nombre}>
+          <article className={styles.tarjeta} key={plato.slug}>
             <div className={styles.imagenContenedor}>
               <Image
                 src={plato.imagen}
@@ -34,6 +35,13 @@ export default function Platos() {
               <h3>{plato.nombre}</h3>
 
               <p>{plato.descripcion}</p>
+
+              <Link
+                href={`/gastronomia/${plato.slug}`}
+                className={styles.botonReceta}
+              >
+                Ver receta
+              </Link>
             </div>
           </article>
         ))}

@@ -1,106 +1,133 @@
 .seccionPlatos {
-  padding: 110px 25px 125px;
-  background: #eef4ef;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem);
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .encabezado {
-  max-width: 850px;
-  margin: 0 auto 55px;
   text-align: center;
+  max-width: 700px;
+  margin: 0 auto clamp(1.5rem, 4vw, 3rem);
+}
+
+.encabezado span {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #b45309;
+  font-weight: 600;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.encabezado h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.encabezado p {
+  margin: 0;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.6;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 27px;
-  max-width: 1280px;
-  margin: auto;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 3vw, 2rem);
 }
 
 .tarjeta {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 14px;
   overflow: hidden;
-  border-radius: 24px;
-  background: #ffffff;
-  box-shadow: 0 18px 50px rgba(16, 63, 52, 0.11);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.tarjeta:hover {
-  transform: translateY(-9px);
-  box-shadow: 0 28px 65px rgba(16, 63, 52, 0.18);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .imagenContenedor {
   position: relative;
   width: 100%;
-  height: 255px;
-  overflow: hidden;
-  background: #d8dfda;
+  height: clamp(180px, 45vw, 240px);
 }
 
 .imagen {
-  display: block;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  transition: transform 0.55s ease;
-}
-
-.tarjeta:hover .imagen {
-  transform: scale(1.08);
 }
 
 .categoria {
   position: absolute;
-  left: 18px;
-  bottom: 17px;
-  padding: 9px 14px;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 999px;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 750;
-  background: rgba(8, 47, 36, 0.88);
-  backdrop-filter: blur(9px);
+  background: rgba(255, 255, 255, 0.92);
+  color: #92400e;
+  font-size: clamp(0.72rem, 1.8vw, 0.85rem);
+  font-weight: 600;
 }
 
 .contenido {
-  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: clamp(1rem, 3vw, 1.5rem);
 }
 
 .contenido h3 {
-  margin-bottom: 13px;
-  color: #14513f;
-  font-size: 26px;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
 }
 
 .contenido p {
-  color: #68726d;
-  font-size: 16px;
-  line-height: 1.75;
+  margin: 0 0 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
+  flex: 1;
 }
 
-.encabezado > span{
-  display: inline-block;
-  color: #5ae62e;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.botonReceta {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  padding: 0.7rem 1rem;
+  background: #b45309;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: background 0.2s;
 }
 
-.encabezado > p {
-  max-width: 780px;
-  margin: 0 auto;
-  color: #68736e;
-  font-size: 18px;
-  line-height: 1.85;
+/* Tablet y laptop pequeña */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.encabezado h2 {
-  margin: 13px 0 20px;
-  color: #123f34;
-  font-size: clamp(36px, 5vw, 59px);
-  line-height: 1.08;
+/* Laptop y PC */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Hover solo con mouse */
+@media (hover: hover) {
+  .tarjeta {
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .botonReceta:hover {
+    background: #92400e;
+  }
 }
